@@ -119,37 +119,6 @@ h1 {
   display: block;
 }
 
-.title-decor h1 {
-  text-align: center;
-  text-transform: uppercase;
-  padding-bottom: 5px;
-}
-
-.title-decor h1:before {
-  width: 28px;
-  height: 5px;
-  display: block;
-  content: '';
-  position: absolute;
-
-  bottom: 5px;
-  left: 50%;
-  margin-left: -14px;
-  background-color: #b88400;
-}
-
-.title-decor h1:after {
-  width: 100px;
-  height: 1px;
-  display: block;
-  content: '';
-  position: absolute;
-  margin-top: 25px;
-  left: 50%;
-  bottom: 6px;
-  margin-left: -50px;
-  background-color: #b88400;
-}
 
 .path-0 {
   animation: pathAnim-0 2s;

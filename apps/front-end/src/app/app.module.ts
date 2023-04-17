@@ -17,6 +17,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SkillsListComponent } from './components/skills-list/skills-list.component';
 import { SkillItemComponent } from './components/skills-list/skill-item/skill-item.component';
 import { BlogPageComponent } from './components/blog-page/blog-page.component';
+import { BlogListComponent } from './components/blog-page/blog-list/blog-list.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { BlogPageComponent } from './components/blog-page/blog-page.component';
     SkillsListComponent,
     SkillItemComponent,
     BlogPageComponent,
+    BlogListComponent,
   ],
   imports: [
     BrowserModule,
