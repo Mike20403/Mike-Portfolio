@@ -18,6 +18,8 @@ import { SkillsListComponent } from './components/skills-list/skills-list.compon
 import { SkillItemComponent } from './components/skills-list/skill-item/skill-item.component';
 import { BlogPageComponent } from './components/blog-page/blog-page.component';
 import { BlogListComponent } from './components/blog-page/blog-list/blog-list.component';
+import { BlogService } from './components/blog-page/blog-service';
+import { ReadmoreComponent } from './components/helper/readmore/readmore.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { BlogListComponent } from './components/blog-page/blog-list/blog-list.co
     SkillItemComponent,
     BlogPageComponent,
     BlogListComponent,
+    ReadmoreComponent,
   ],
   imports: [
     BrowserModule,

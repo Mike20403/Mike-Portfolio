@@ -1,12 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Helvetica', sans-serif;
+}
+
+h1 {
+  font-family: 'Bookman Old Style', serif;
+}
+
+div {
+  font-family: "Arial";
+}
+h6 {
+font-family: "Helvetica";
 }
 
 .shadow1 {
   box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
-    0 15px 40px rgba(166, 173, 201, 0.2);
+  0 15px 40px rgba(166, 173, 201, 0.2);
 }
+
 .title-decor h1 {
   text-align: center;
   text-transform: uppercase;
