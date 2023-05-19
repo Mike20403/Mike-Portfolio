@@ -1,0 +1,15 @@
+<h1>Tạo bài post</h1>
+<form>
+  <label for="postTitle">Tiêu đề:</label>
+  <input type="text" id="postTitle" name="postTitle" required><br><br>
+
+  <ckeditor [editor]="Editor" [config]="editorConfig"
+            (change)="onChange($event)"
+            (focus)="onFocus($event)"
+            (blur)="onBlur($event)"
+            [(ngModel)]="postData.content"
+            name="content"
+  ></ckeditor><br><br>
+  <router-outlet></router-outlet>
+  <button (click)="savePost()">Đăng bài</button>
+</form>

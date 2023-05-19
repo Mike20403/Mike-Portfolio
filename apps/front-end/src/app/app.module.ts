@@ -18,8 +18,10 @@ import { SkillsListComponent } from './components/skills-list/skills-list.compon
 import { SkillItemComponent } from './components/skills-list/skill-item/skill-item.component';
 import { BlogPageComponent } from './components/blog-page/blog-page.component';
 import { BlogListComponent } from './components/blog-page/blog-list/blog-list.component';
-import { BlogService } from './components/blog-page/blog-service';
-import { ReadmoreComponent } from './components/helper/readmore/readmore.component';
+import {ReadmoreComponent} from "./components/helper/readmore/readmore.component";
+import {EditorComponent} from "./components/editor/editor.component";
+import {CKEditorComponent, CKEditorModule} from "@ckeditor/ckeditor5-angular";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { ReadmoreComponent } from './components/helper/readmore/readmore.compone
     BlogPageComponent,
     BlogListComponent,
     ReadmoreComponent,
+    EditorComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -44,6 +48,10 @@ import { ReadmoreComponent } from './components/helper/readmore/readmore.compone
     AngularFireDatabaseModule,
     AppRoutingModule,
     FontAwesomeModule,
+    CKEditorModule,
+    FormsModule
+
+
   ],
   providers: [],
   bootstrap: [AppComponent],

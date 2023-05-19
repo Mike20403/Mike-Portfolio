@@ -19,12 +19,14 @@
     "@angular/platform-browser": "^15.1.0",
     "@angular/platform-browser-dynamic": "^15.1.0",
     "@angular/router": "^15.1.0",
+    "@ckeditor/ckeditor5-angular": "^6.0.1",
+    "@ckeditor/ckeditor5-build-classic": "^37.1.0",
     "@fortawesome/angular-fontawesome": "^0.12.1",
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
     "@fortawesome/free-brands-svg-icons": "^6.3.0",
     "@fortawesome/free-regular-svg-icons": "^6.3.0",
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
-    "@nrwl/angular": "15.9.2",
+    "@nrwl/angular": "^15.9.2",
     "bootstrap": "^5.2.3",
     "firebase": "^9.17.1",
     "rxjs": "~7.8.0",
@@ -37,6 +39,7 @@
     "@angular-devkit/schematics": "~15.1.1",
     "@angular/cli": "~15.1.1",
     "@angular/compiler-cli": "^15.1.0",
+    "@nrwl/workspace": "15.9.2",
     "@schematics/angular": "~15.1.1",
     "@types/jasmine": "~4.3.0",
     "jasmine-core": "~4.5.0",
@@ -45,10 +48,8 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
-    "typescript": "~4.9.4",
-    "@nrwl/workspace": "15.9.2",
     "nx": "15.9.2",
-    "prettier": "^2.6.2"
+    "prettier": "^2.6.2",
+    "typescript": "~4.9.4"
   }
 }
-
