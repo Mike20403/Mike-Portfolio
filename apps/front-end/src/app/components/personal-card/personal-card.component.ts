@@ -32,7 +32,7 @@ export class PersonalCardComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.avtSubscription = this.firebaseService
-      .getImagefromStorage()
+      .getAvatarfromStorage()
       .subscribe((avtObj) => {
         this.avatarUrl = avtObj.payload.child('downloadURL').val();
         console.log(this.avatarUrl);

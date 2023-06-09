@@ -2,13 +2,16 @@
 <form>
   <label for="postTitle">Tiêu đề:</label>
   <input type="text" id="postTitle" name="postTitle" required><br><br>
+  <input type="file" (change)="onFileChange($event)">
 
-  <ckeditor [editor]="Editor" [config]="editorConfig"
-            (change)="onChange($event)"
-            (focus)="onFocus($event)"
-            (blur)="onBlur($event)"
+  <ckeditor id="editor" [editor]="Editor" [config]="editorConfig"
+
+            [title]="postData.title"
             [(ngModel)]="postData.content"
+
+
             name="content"
+            #ckeditor
   ></ckeditor><br><br>
   <router-outlet></router-outlet>
   <button (click)="savePost()">Đăng bài</button>

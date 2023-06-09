@@ -1,7 +1,7 @@
 
 <div class="container mt-5">
   <div class="row">
-    <ng-container *ngFor="let post of posts| slice:0:3;let i = index ">
+    <ng-container *ngFor="let post of posts| slice:0:2;let i = index ">
       <ng-container *ngIf="i === 0">
         <ng-container *ngTemplateOutlet="entrance_post; context:{post: post}">
         </ng-container>
@@ -11,7 +11,7 @@
         <div class="col-md-4">
           <ng-container *ngTemplateOutlet="sub_post1; context:{post: post}">
           </ng-container>
-          <ng-container *ngIf="posts.length > 2">
+          <ng-container *ngIf="posts.length >= 2">
             <!-- Only display the third post if there are at least three posts -->
             <ng-container *ngTemplateOutlet="sub_post2; context:{post: posts[2]}">
             </ng-container>
@@ -83,7 +83,7 @@
 
   </div>
   <div class="row mt-2">
-    <div class="seemore text-center">
+    <div class="seemore text-center btn" (click) ="onSeemore()">
       See more
     </div>
 

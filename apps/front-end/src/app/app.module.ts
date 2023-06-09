@@ -16,12 +16,19 @@ import { TimelinesComponent } from './components/timelines/timelines.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SkillsListComponent } from './components/skills-list/skills-list.component';
 import { SkillItemComponent } from './components/skills-list/skill-item/skill-item.component';
-import { BlogPageComponent } from './components/blog-page/blog-page.component';
-import { BlogListComponent } from './components/blog-page/blog-list/blog-list.component';
-import {ReadmoreComponent} from "./components/helper/readmore/readmore.component";
-import {EditorComponent} from "./components/editor/editor.component";
-import {CKEditorComponent, CKEditorModule} from "@ckeditor/ckeditor5-angular";
-import {FormsModule} from "@angular/forms";
+import { EditorComponent } from './components/editor/editor.component';
+import { FormsModule } from '@angular/forms';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { BlogPageModule } from './components/blog-page/blog-page.module';
+import { AdminDashboardComponent} from "./components/admin-dashboard/admin-dashboard.component";
+import {MatInputModule} from "@angular/material/input";
+
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatSortModule} from "@angular/material/sort";
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MatTable, MatTableModule} from "@angular/material/table";
+
 
 @NgModule({
   declarations: [
@@ -34,11 +41,8 @@ import {FormsModule} from "@angular/forms";
     TimelinesComponent,
     SkillsListComponent,
     SkillItemComponent,
-    BlogPageComponent,
-    BlogListComponent,
-    ReadmoreComponent,
     EditorComponent,
-
+    AdminDashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +53,20 @@ import {FormsModule} from "@angular/forms";
     AppRoutingModule,
     FontAwesomeModule,
     CKEditorModule,
-    FormsModule
+    FormsModule,
+    BlogPageModule,
+BrowserAnimationsModule,
+    MatInputModule,
+    MatTableModule,
+
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatProgressSpinnerModule,
+
+
+
+
 
 
   ],
