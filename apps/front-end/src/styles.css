@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import "node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
 * {
   font-family: 'Helvetica', sans-serif;
 }
@@ -6,6 +7,7 @@
 h1 {
   font-family: 'Bookman Old Style', serif;
 }
+
 
 div {
   font-family: "Arial";
@@ -49,5 +51,12 @@ font-family: "Helvetica";
   bottom: 6px;
   margin-left: -50px;
   background-color: #b88400;
+}
+th {
+  font-weight: bold;
+  font-size: medium;
+}
+.cdk-overlay-container {
+  z-index: 9999!important;
 }
 

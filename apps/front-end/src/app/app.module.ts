@@ -20,15 +20,17 @@ import { EditorComponent } from './components/editor/editor.component';
 import { FormsModule } from '@angular/forms';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { BlogPageModule } from './components/blog-page/blog-page.module';
-import { AdminDashboardComponent} from "./components/admin-dashboard/admin-dashboard.component";
-import {MatInputModule} from "@angular/material/input";
+import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { MatInputModule } from '@angular/material/input';
 
-import {MatPaginatorModule} from "@angular/material/paginator";
-import {MatSortModule} from "@angular/material/sort";
-import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {MatTable, MatTableModule} from "@angular/material/table";
-
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSort, MatSortModule } from '@angular/material/sort';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTable, MatTableModule } from '@angular/material/table';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DialogComponent } from './components/admin-dashboard/dialog/dialog.component';
+import { PostEditorComponent } from './components/admin-dashboard/post-editor/post-editor.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,10 @@ import {MatTable, MatTableModule} from "@angular/material/table";
     SkillsListComponent,
     SkillItemComponent,
     EditorComponent,
-    AdminDashboardComponent
+    AdminDashboardComponent,
+    DialogComponent,
+    PostEditorComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -55,20 +60,12 @@ import {MatTable, MatTableModule} from "@angular/material/table";
     CKEditorModule,
     FormsModule,
     BlogPageModule,
-BrowserAnimationsModule,
-    MatInputModule,
-    MatTableModule,
-
+    BrowserAnimationsModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule,
     MatProgressSpinnerModule,
-
-
-
-
-
-
+    MatSortModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

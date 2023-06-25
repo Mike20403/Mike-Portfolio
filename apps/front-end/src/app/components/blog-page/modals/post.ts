@@ -6,7 +6,7 @@ export class Post {
   // _description?:string;
   // _content?:string;
   // _imgURL?:string;
-constructor(public _title:string,public _hashtag:string,public _article:string,public _preface:string,
+constructor(public _id:number,public _title:string,public _hashtag:string,public _article:string,public _preface:string,
             public _content:string,public _imgURL:string) {
 }
 }
