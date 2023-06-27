@@ -1,16 +1,8 @@
 import {Component, EventEmitter, Renderer2, ViewChild} from '@angular/core';
-
-import {BlurEvent, ChangeEvent, FocusEvent} from "@ckeditor/ckeditor5-angular";
-
-import { v4 as uuidv4 } from 'uuid';
 import * as CustomEditor from "apps/front-end/src/ckeditor5/build/ckeditor"
-import  ClassicEditor from "@ckeditor/ckeditor5-build-classic"
-
 import { AngularFireStorage } from '@angular/fire/compat/storage';
-import { CustomUploadAdapter } from "../../services/UploadImageAdapter";
-import ImageRemoveEventCallbackPlugin from 'apps/front-end/src/ckeditor5/build/ckeditor';
-import {getDownloadURL} from "@angular/fire/storage";
-import {UploadTask, UploadTaskSnapshot} from "@angular/fire/compat/storage/interfaces";
+import { UploadTaskSnapshot} from "@angular/fire/compat/storage/interfaces";
+import {Post} from "../blog-page/modals/post";
 
 @Component({
   selector: 'app-editor',
@@ -25,6 +17,8 @@ export class EditorComponent {
   public imageUploadEvent = new EventEmitter<string>();
   public downloadUrls:string[] = [];
   public componentEvents: string[] = [];
+  post!:Post;
+  postCoverURL:string = "/assets/post-cover.png";
   postData = { title: '', content: '' };
   ngOnInit(): void {
 
@@ -37,6 +31,9 @@ export class EditorComponent {
  };
 
 
+}
+onSelect(value:string){
+    console.log(value);
 }
 // private customUploadAdapterPlugin(editor:any) {
 //   editor.plugins.get('FileRepository').createUploadAdapter = (loader) => {
@@ -90,8 +87,11 @@ onFileChange(event: Event) {
     const dataUrl = reader.result as string;
     console.log(dataUrl);
     const imgElement = `<img src="${dataUrl}" alt="Uploaded Image">`;
-    this.postData.content += imgElement;
+    // this.postData.content += imgElement;
+    this.postCoverURL = dataUrl;
+
   };
+
 
   reader.readAsDataURL(file);
 }

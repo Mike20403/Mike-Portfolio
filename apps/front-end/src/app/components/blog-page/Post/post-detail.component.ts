@@ -1,7 +1,8 @@
-import {Component, OnInit} from "@angular/core";
+import {Component, Inject, OnInit} from "@angular/core";
 import {ActivatedRoute} from "@angular/router";
 import {BlogService} from "../blog-service";
 import {Post} from "../modals/post";
+import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 
 @Component({
   template: `
@@ -17,7 +18,9 @@ export class PostDetailComponent implements OnInit{
   postTitle!: string;
   postArr!:Post[];
   constructor(private routes:ActivatedRoute,
-  private postService:BlogService){
+  private postService:BlogService,
+  dialogRef:MatDialogRef<PostDetailComponent>,
+              @Inject(MAT_DIALOG_DATA) public data:any){
 
   }
   ngOnInit(): void {
