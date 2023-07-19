@@ -1,0 +1,108 @@
+/* You can add global styles to this file, and also import other style files */
+@import "node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
+@import "./ckeditor-styles.css";
+* {
+  font-family: 'Helvetica', sans-serif;
+}
+
+h1 {
+  font-family: 'Calibri', serif;
+}
+
+
+div {
+  font-family: "Arial";
+}
+h6 {
+font-family: "Helvetica";
+}
+
+.shadow1 {
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+  0 15px 40px rgba(166, 173, 201, 0.2);
+}
+
+.title-decor h1 {
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+
+.title-decor h1:before {
+  width: 28px;
+  height: 5px;
+  display: block;
+  content: '';
+  position: absolute;
+
+  bottom: 5px;
+  left: 50%;
+  margin-left: -14px;
+  background-color: #b88400;
+}
+
+.title-decor h1:after {
+  width: 100px;
+  height: 1px;
+  display: block;
+  content: '';
+  position: absolute;
+  margin-top: 25px;
+  left: 50%;
+  bottom: 6px;
+  margin-left: -50px;
+  background-color: #b88400;
+}
+th {
+  font-weight: bold;
+  font-size: medium;
+}
+.cdk-overlay-container {
+  z-index: 100!important;
+  height: 100%!important;
+  overflow: auto!important;
+
+
+}
+.cdk-overlay-backdrop {
+position: fixed!important;
+
+}
+.ck-widget_selected{
+  z-index:10000!important;
+
+}
+mat-dialog-container{
+  position: relative!important;
+  margin-top: 100px!important;
+  max-height: 85vh!important;
+
+}
+
+.postDialog {
+  /*height: 100% !important;*/
+
+
+}
+.mat-mdc-dialog-container .mdc-dialog__surface {
+  height: auto!important;
+
+}
+.mdc-text-field .mdc-text-field__input {
+  caret-color: #b88400!important;
+}
+
+.mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+  color: #b88400!important;
+}
+.mdc-text-field--filled .mdc-line-ripple::after{
+  border-bottom-color: #b88400!important;
+}
+.mdc-data-table__cell{
+  max-width: 25vw!important;
+  white-space: nowrap;      /* Prevents text from wrapping */
+  overflow: hidden;         /* Hides the overflowing text */
+  text-overflow: ellipsis;  /* Displays an ellipsis (...) when text overflows */
+
+}
+

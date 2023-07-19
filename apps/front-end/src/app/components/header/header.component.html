@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand text-white" href="#">
+      <img alt="" height="35px" src="../../../assets/Logo.png" width="100"/>
+    </a>
+    <button
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      class="navbar-toggler bg-white"
+      data-bs-target="#navbarNav"
+      data-bs-toggle="collapse"
+      type="button"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a [routerLink]="['/blog']" aria-current="page" class="nav-link active text-white" href="#">Blog</a>
+        </li>
+
+<!--        <li class="nav-item">-->
+<!--          <a [routerLink]="['/admin-dashboard']" class="nav-link text-white" href="#">Admin Dashboard</a>-->
+<!--        </li>-->
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,89 @@
+<div class="blog-main">
+  <div class="card rounded-0 shadow1 p-5">
+
+    <div  *ngIf="!router.url.includes('/blog/post/')" class="title-decor position-relative">
+      <h1 class="title text text-center mt-3 mb-3 text-warning"
+          style="font-family: 'Buffalo', sans-serif; font-size: 30px">
+        My Blog
+      </h1>
+    </div>
+    <!--    <div class="container">-->
+    <!--      <div class="row g-0 b-">-->
+    <!--        <div class="col-lg-9">-->
+    <!--          <div class="card border-0" style="width: 100%;height:300px"></div>-->
+    <!--        </div>-->
+    <!--        <div class="col-lg-3">-->
+    <!--          <div class="card " style="width: 100%;height:300px"></div>-->
+    <!--        </div>-->
+
+    <!--      </div>-->
+    <!--    </div>-->
+    <router-outlet>  </router-outlet>
+<!--    <app-blog-list></app-blog-list>-->
+
+
+    <!--    <div class="container">-->
+    <!--      <div class="row mt-5">-->
+    <!--        <div class="col-lg-8">-->
+    <!--          <div class="card mb-4">-->
+    <!--            <img alt="Card image cap" class="card-img-top"-->
+    <!--                 src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg">-->
+    <!--            <div class="card-body">-->
+    <!--              <h2 class="card-title">Blog post title goes here</h2>-->
+    <!--              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a-->
+    <!--                ante.</p>-->
+    <!--              <a class="btn btn-primary" href="#">Read more</a>-->
+    <!--            </div>-->
+    <!--            <div class="card-footer text-muted">-->
+    <!--              Posted on January 1, 2023 by John Smith-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--          <div class="card mb-4">-->
+    <!--            <img alt="Card image cap" class="card-img-top"-->
+    <!--                 src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg">-->
+    <!--            <div class="card-body">-->
+    <!--              <h2 class="card-title">Blog post title goes here</h2>-->
+    <!--              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a-->
+    <!--                ante.</p>-->
+    <!--              <a class="btn btn-primary" href="#">Read more</a>-->
+    <!--            </div>-->
+    <!--            <div class="card-footer text-muted">-->
+    <!--              Posted on January 1, 2023 by John Smith-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--        </div>-->
+    <!--        <div class="col-lg-4">-->
+    <!--          <div class="card mb-4">-->
+    <!--            <div class="card-body">-->
+    <!--              <h2 class="card-title">About</h2>-->
+    <!--              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a-->
+    <!--                ante.</p>-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--          <div class="card mb-4">-->
+    <!--            <div class="card-body">-->
+    <!--              <h2 class="card-title">Categories</h2>-->
+    <!--              <div class="list-group">-->
+    <!--                <a class="list-group-item" href="#">Category 1</a>-->
+    <!--                <a class="list-group-item" href="#">Category 2</a>-->
+    <!--                <a class="list-group-item" href="#">Category 3</a>-->
+    <!--              </div>-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--          <div class="card mb-4">-->
+    <!--            <div class="card-body">-->
+    <!--              <h2 class="card-title">Archives</h2>-->
+    <!--              <div class="list-group">-->
+    <!--                <a class="list-group-item" href="#">January 2023</a>-->
+    <!--                <a class="list-group-item" href="#">February 2023</a>-->
+    <!--                <a class="list-group-item" href="#">March 2023</a>-->
+    <!--              </div>-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--    </div>-->
+
+  </div>
+<!--<app-editor>  </app-editor>-->
+</div>

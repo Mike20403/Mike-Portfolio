@@ -1,0 +1,94 @@
+
+<div class="container mt-5">
+  <div class="row">
+    <ng-container *ngFor="let post of posts | slice:0:2;let i = index ">
+      <ng-container *ngIf="i === 0">
+        <ng-container *ngTemplateOutlet="entrance_post; context:{post: post}">
+        </ng-container>
+      </ng-container>
+
+      <ng-container *ngIf="i === 1">
+        <div class="col-md-4">
+          <ng-container *ngTemplateOutlet="sub_post1; context:{post: post}">
+          </ng-container>
+          <ng-container *ngIf="posts.length >= 2">
+            <!-- Only display the third post if there are at least three posts -->
+            <ng-container *ngTemplateOutlet="sub_post2; context:{post: posts[2]}">
+            </ng-container>
+          </ng-container>
+        </div>
+      </ng-container>
+
+
+
+    </ng-container>
+    <ng-template #entrance_post let-post="post">
+      <div class="col-md-8 h-auto "  style="cursor: pointer" [routerLink]="'/blog/post/'+post._title" (click)="refreshPage('/blog/post/'+post._title)">
+        <div class="row entrance_post h-100">
+          <div class="view image-wrapper overlay rounded z-depth-1-half mb-md-0 mb-4">
+            <img alt="Blog  image" class="img-fluid blog-img rounded-3" style="height: 40vh"
+                 [src]="post._imgURL">
+            <a href="#">
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+          <h6 class="fw-bold mt-0 text-secondary post-topic" style="font-size: 18px"><i class="fas fa-music pr-2"></i>{{post._article}}</h6>
+          <h4 class="post-title mb-3" style="font-size: 30px"><strong>{{post._title}}</strong></h4>
+          <div class="preface"><p>{{post._preface}}</p></div>
+
+
+          <p class="text-end">by <a><strong>John Smith</strong></a>, 17/04/2023</p>
+        </div>
+      </div>
+
+    </ng-template>
+
+
+      <ng-template #sub_post1 let-post="post">
+
+          <div class="row subpost1"  style="cursor: pointer" [routerLink]="'../post/'+post._title" (click)="refreshPage('/blog/post/'+post._title)">
+            <div class="view image-wrapper overlay rounded z-depth-1-half mb-md-0 mb-4">
+              <img alt="Blog  image" class="img-fluid blog-img rounded-3"
+                   [src]="post._imgURL">
+              <a href="#">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <h6 class="fw-bold my-2 text-secondary post-topic"><i class="fas fa-music pr-2"></i>{{post._article}}</h6>
+            <h4 class="post-title mb-3"><strong>{{post._title}}</strong></h4>
+            <div class="sub-preface"><p>{{post._preface}}</p></div>
+            <p class="text-end">by <a><strong>Jane Doe</strong></a>, 15/04/2023</p>
+          </div>
+
+
+      </ng-template>
+    <ng-template #sub_post2 let-post="post">
+      <div class="row subpost2"  style="cursor: pointer" [routerLink]="'../post/'+post._title" (click)="refreshPage('/blog/post/'+post._title)">
+        <div class="view overlay rounded z-depth-1-half mb-md-0 mb-4 image-wrapper">
+          <img alt="Blog image  hover-zoom bg-image" class="img-fluid blog-img rounded-3"
+               [src]="post._imgURL">
+          <a href="#">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <h6 class="fw-bold my-2 text-secondary post-topic"><i class="fas fa-music pr-2"></i>{{post._article}}</h6>
+        <h4 class="post-title mb-3"><strong>{{post._title}}</strong></h4>
+        <div class="sub-preface"><p>{{post._preface}}</p></div>
+        <p class="text-end">by <a><strong>Mike Johnson</strong></a>, 13/04/2023</p>
+      </div>
+    </ng-template>
+
+
+
+
+
+
+  </div>
+  <div class="row mt-2">
+    <div class="seemore text-center btn" (click) ="onSeemore()">
+      See more
+    </div>
+
+  </div>
+
+</div>

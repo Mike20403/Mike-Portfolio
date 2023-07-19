@@ -1,0 +1,16 @@
+<app-header></app-header>
+
+
+  <app-alert  type="success" [message]="alertMsg" ></app-alert>
+
+
+<div class="container-fluid" style=";background:rgb(234,234,234);">
+  <div class="row">
+    <div class="col-xxl-3">
+      <app-personal-card></app-personal-card>
+    </div>
+    <div class="col-xxl-9">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

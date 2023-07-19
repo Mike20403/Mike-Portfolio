@@ -1,0 +1,100 @@
+{
+  "name": "front-end",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "generators": {},
+  "sourceRoot": "apps/front-end/src",
+  "prefix": "app",
+  "targets": {
+    "build": {
+      "executor": "@angular-builders/custom-webpack:browser",
+      "options": {
+
+        "outputPath": "dist/apps/front-end",
+        "index": "apps/front-end/src/index.html",
+        "main": "apps/front-end/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/front-end/tsconfig.app.json",
+        "assets": [
+          "apps/front-end/src/favicon.ico",
+          "apps/front-end/src/assets",
+          "apps/front-end/src/ckeditor5"
+        ],
+        "styles": [
+          "apps/front-end/src/styles.css",
+          "node_modules/bootstrap/dist/css/bootstrap.min.css",
+          "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+
+        ],
+        "scripts": [
+          "node_modules/bootstrap/dist/js/bootstrap.bundle.js",
+          
+
+          ]
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true,
+          "fileReplacements": [
+            {
+              "replace": "apps/front-end/src/environments/environment.ts",
+              "with": "apps/front-end/src/environments/environment.development.ts"
+            }
+          ]
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-builders/custom-webpack:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "front-end:build:production"
+        },
+        "development": {
+          "browserTarget": "front-end:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-builders/custom-webpack:extract-i18n",
+      "options": {
+        "browserTarget": "front-end:build"
+      }
+    },
+    "test": {
+      "executor": "@angular-builders/custom-webpack:karma",
+      "options": {
+        "polyfills": ["zone.js", "zone.js/testing"],
+        "tsConfig": "apps/front-end/tsconfig.spec.json",
+        "assets": [
+          "apps/front-end/src/favicon.ico",
+          "apps/front-end/src/assets"
+        ],
+        "styles": ["apps/front-end/src/styles.css"],
+        "scripts": []
+      }
+    }
+  }
+}

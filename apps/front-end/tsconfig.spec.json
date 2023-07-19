@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc",
+    "types": ["jasmine"],
+    "experimentalDecorators": true,
+    "allowJs": true,
+    "target": "es2015",
+    // other options
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["src/**/*.spec.ts", "src/**/*.d.ts"]
+}

@@ -1,0 +1,19 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+
+    "outDir": "../../dist/out-tsc",
+    "types": [],
+    "allowJs": true,
+    "target": "es2015",
+    // other options
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+
+  },
+
+
+  "files": ["src/main.ts"],
+  "include": ["src/**/*.d.ts"]
+}
+

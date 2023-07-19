@@ -1,0 +1,22 @@
+:host {
+  display: block;
+}
+
+.blog-item:hover{
+  background-color: lightgoldenrodyellow;
+}
+.blog-item:hover .post-title,.subpost1:hover .post-title,.subpost2:hover .post-title {
+  color: #b88400;
+}
+
+.blog-item:hover img  {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+  z-index: 99;
+
+}
+
+.blog-item:hover.image-wrapper {
+  position: relative;
+}
+

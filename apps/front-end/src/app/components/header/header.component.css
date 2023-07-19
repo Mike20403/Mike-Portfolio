@@ -1,0 +1,46 @@
+.app-header-color {
+  background: linear-gradient(307deg, #696fc8, #687fb9, #5cb7b0);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 5s ease infinite;
+  animation: AnimationName 5s ease infinite;
+}
+
+.nav-link {
+  transition: all 0.2s;
+  position: relative;
+}
+
+.nav-link:hover::after {
+  content: '';
+  height: 2px;
+  width: 100%;
+  background-color: gold;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 51%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 51%;
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 51%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 51%;
+  }
+}

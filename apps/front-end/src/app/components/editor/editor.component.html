@@ -1,0 +1,57 @@
+<h1 class="text-center mb-5 fw-bold text-warning">Tạo bài post</h1>
+<form>
+
+<!--  <label for="postTitle" class="fw-bold fs-3 text-warning">Tiêu đề:</label>-->
+<!--  <input class="ms-3" type="text" id="postTitle" [(ngModel)]="postData.title" name="postTitle" required style="width: 25vw;"><br><br>-->
+<!--  -->
+  <label for="topic" class="fw-semibold fs-6 text-warning  d-block">Chủ đề: </label>
+  <select #topic id="topic" class="form-select mb-4" aria-label="Default select example"  [ngModelOptions]="{standalone: true}" [(ngModel)]="postData._article" (change) ="onSelect(topic.value)">
+    <option selected>Open this select menu</option>
+    <option value="Tutorial">Tutorial</option>
+    <option value="Social">Social</option>
+    <option value="Programming">Programming</option>
+    <option value="Sport">Sport</option>
+    <option value="ESport">Esport</option>
+    <option value="Angular">Angular</option>
+    <option value="Javascript">Javascript</option>
+    <option value="Typescript">Typescript</option>
+  </select>
+  <mat-form-field class="example-chip-list d-block">
+    <mat-label >Hashtags</mat-label>
+    <mat-chip-grid #chipGrid aria-label="Enter fruits">
+      <mat-chip-row *ngFor="let ht of this.postData._hashtag"
+                    (removed)="remove(ht)"
+                    [editable]="true"
+                    (edited)="edit(ht, $event)"
+                    [aria-description]="'press enter to edit ' + ht">
+        {{ht}}
+        <button matChipRemove [attr.aria-label]="'remove ' + ht">
+          <mat-icon>cancel</mat-icon>
+        </button>
+      </mat-chip-row>
+      <input placeholder="New hashtag..."
+             [matChipInputFor]="chipGrid"
+             [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+             [matChipInputAddOnBlur]="addOnBlur"
+             (matChipInputTokenEnd)="add($event)"/>
+    </mat-chip-grid>
+  </mat-form-field>
+  <label for="postcoverImg" class="fw-semibold fs-6 text-warning">Ảnh bìa:</label>
+  <input class="mb-4 ms-3"   type="file" (change)="onFileChange($event)" id="postcoverImg" name="postcoverImg" #postCoverImg>
+  <img [src]="postCoverURL"class="d-block mb-4" style="width: 20vw;height:20vh "  alt="post-cover">
+<!--  <div class="custom-editor"></div>-->
+
+
+  <ckeditor
+            id="editor" [editor]="Editor" [config]="editorConfig"
+            [(ngModel)]="postData._content"
+            (ready)="onReady($event)"
+            name="content"
+
+            #ckeditor
+  ></ckeditor><br><br>
+
+  <button (click)="!isEdited? savePost() : updatePost()">Đăng bài</button>
+  <button (click)="onPreview()">Xem trước</button>
+</form>
+

@@ -1,0 +1,26 @@
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.admin-dashboard{
+  margin: 115px 45px auto;
+}
+
+h1 {
+  font-family: Roboto;
+}
+h3 {
+  display: inline;
+}
+
+th {
+  font-weight: bold!important;
+  font-size: medium;
+}
+
+.button-remove:hover{
+  opacity: 0.5;
+
+}
+
+
+
+

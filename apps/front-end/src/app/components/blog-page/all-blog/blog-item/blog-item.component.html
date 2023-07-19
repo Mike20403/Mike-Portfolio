@@ -1,0 +1,16 @@
+<a [routerLink]="['../post', post!._title]" (click)="refreshPage('/blog/post/'+post!._title)" class="blog-item p-5 text-dark pe-auto text-decoration-none d-inline-block" style=" cursor:pointer; height:100%; min-height: 12vh">
+
+  <div class="view image-wrapper overlay rounded z-depth-1-half mb-md-0 mb-4">
+    <img alt="Blog image " class="img-fluid rounded-3" style=" width: 100vw;
+  min-height: 230px"
+         [src]="post!._imgURL">
+    <a href="#">
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+  <h6 class="fw-bold my-2 text-secondary post-topic"><i class="fas fa-music pr-2"></i>{{post!._article}}</h6>
+  <h4 class="post-title mb-3"><strong>{{post!._title}}</strong></h4>
+  <p class="text-end">by <a><strong>Jane Doe</strong></a>, 15/04/2023</p>
+
+
+</a>

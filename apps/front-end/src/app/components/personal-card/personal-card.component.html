@@ -1,0 +1,66 @@
+<div class="card shadow1 sticky-top">
+  <div class="avt-wrapper position-relative">
+    <img
+      [src]="avatarUrl"
+      alt="profile-avt"
+      class="avatar"
+      style="border: darkgrey solid 0.1px; border-radius: 100px"
+    />
+    <div class="avt-hover position-absolute top-50 start-50 translate-middle">
+      <button
+        class="btn btn-primary"
+        data-bs-target="#exampleModal"
+        data-bs-toggle="modal"
+        type="button"
+      >
+        Add photo
+      </button>
+    </div>
+  </div>
+
+  <div class="Nickname">Khương Mike</div>
+  <div class="contact-info mt-5 ms-auto me-auto">
+    <div class="linkedin mb-2">
+      <a
+        class="linkedin text-dark"
+        href="https://www.linkedin.com/in/mai-kh%C6%B0%C6%A1ng-371a43223/"
+        style="cursor: pointer"
+        style="text-decoration: none"
+        target="_blank"
+      >
+        <fa-icon [icon]="['fab','linkedin']" class="me-1 fa-xl text-dark"></fa-icon>
+        My Linkedin
+      </a>
+    </div>
+    <div class="facebook mb-2">
+      <a
+        class="facebook text-dark"
+        href="https://www.facebook.com/khuong.mai.357"
+        style="cursor: pointer"
+        style="text-decoration: none"
+        target="_blank"
+      >
+        <fa-icon  class="me-1 fa-xl text-dark"></fa-icon>
+        My Facebook
+      </a>
+    </div>
+    <div class="github mb-2">
+      <a
+        class="github text-dark"
+        href="https://github.com/Mike20403"
+        style="cursor: pointer"
+        style="text-decoration: none"
+        target="_blank"
+      >
+
+        <fa-icon  [icon]="['fab','github']" class="me-1 fa-xl text-dark"></fa-icon>
+        My Github
+      </a>
+    </div>
+    <div class="gmail mb-2">
+      <fa-icon  class="me-1 fa-xl"></fa-icon>
+      maikhuong2003@mail.com
+    </div>
+  </div>
+</div>
+<app-avt-modal></app-avt-modal>

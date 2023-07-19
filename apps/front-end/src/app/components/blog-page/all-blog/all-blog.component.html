@@ -1,0 +1,8 @@
+<div class="container-fluid">
+  <div class="row p-3">
+    <app-blog-item class="col-md-6 p-5"  *ngFor="let post of (this.posts|async)!.posts.slice()"
+    [post] = "post"></app-blog-item>
+
+    </div>
+  </div>
+
